@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Powered Pothole Detection</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-road"></i>
+
+            <span>PotholeAI</span>
+
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#features">Features</a></li>
+
+            <li><a href="#upload">Detection</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+        <a href="#upload" class="btn-nav">
+
+            Detect Now
+
+        </a>
+
+    </nav>
+
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-left">
+
+        <span class="tag">
+
+            🚧 AI Powered Road Safety
+
+        </span>
+
+        <h1>
+
+            Intelligent
+
+            <span>Pothole Detection</span>
+
+            Using YOLOv8
+
+        </h1>
+
+        <p>
+
+            Upload road images or videos and let Artificial Intelligence
+            automatically detect potholes with high accuracy.
+
+            Improve road maintenance and make transportation safer.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#upload" class="primary-btn">
+
+                Start Detection
+
+            </a>
+
+            <a href="#about" class="secondary-btn">
+
+                Learn More
+
+            </a>
+
+        </div>
+
+        <div class="stats">
+
+            <div class="stat-box">
+
+                <h2>95%</h2>
+
+                <p>Accuracy</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h2>AI</h2>
+
+                <p>YOLOv8 Model</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h2>Fast</h2>
+
+                <p>Inference</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+
+        <div class="road-card">
+
+            <img src="{{ url_for('static', filename='images/homeroad.png') }}"
+                 alt="Road">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SCROLL DOWN -->
+
+<div class="scroll-indicator">
+
+    <a href="#about">
+
+        <i class="fa-solid fa-angles-down"></i>
+
+    </a>
+
+</div>
+
+<!-- About Section starts in Part 2 -->
+
+<!-- ================= ABOUT SECTION ================= -->
+
+<section id="about" class="about section">
+
+    <div class="section-title">
+
+        <span>About Project</span>
+
+        <h2>Smart Road Damage Detection</h2>
+
+        <p>
+            Our AI-powered pothole detection system uses the YOLOv8 deep learning
+            model to automatically identify potholes from road images and videos.
+            The system helps municipalities, highway authorities, and road
+            maintenance teams improve road safety and reduce accidents.
+        </p>
+
+    </div>
+
+    <div class="about-container">
+
+        <div class="about-image">
+
+            <img src="{{ url_for('static', filename='images/road.jpg') }}"
+                 alt="AI Detection">
+
+        </div>
+
+        <div class="about-content">
+
+            <div class="about-card">
+
+                <i class="fa-solid fa-brain"></i>
+
+                <div>
+
+                    <h3>Artificial Intelligence</h3>
+
+                    <p>
+                        Powered by the latest YOLOv8 object detection model for
+                        high-speed inference.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="about-card">
+
+                <i class="fa-solid fa-camera"></i>
+
+                <div>
+
+                    <h3>Image & Video Detection</h3>
+
+                    <p>
+                        Upload images or videos and receive accurate pothole
+                        detection within seconds.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="about-card">
+
+                <i class="fa-solid fa-road"></i>
+
+                <div>
+
+                    <h3>Road Safety</h3>
+
+                    <p>
+                        Detect damaged roads early and improve transportation
+                        safety for everyone.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section id="features" class="features section">
+
+    <div class="section-title">
+
+        <span>Our Features</span>
+
+        <h2>Why Choose Our AI System?</h2>
+
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            <h3>Fast Detection</h3>
+
+            <p>
+                Detect potholes within seconds using optimized YOLOv8 inference.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-video"></i>
+
+            <h3>Video Analysis</h3>
+
+            <p>
+                Supports both road images and real-time road videos.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>High Accuracy</h3>
+
+            <p>
+                Trained using thousands of pothole images for better performance.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+
+            <h3>Easy Upload</h3>
+
+            <p>
+                Simple drag-and-drop upload interface with instant AI results.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <h3>Road Safety</h3>
+
+            <p>
+                Helps prevent accidents by identifying road damage early.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-microchip"></i>
+
+            <h3>Deep Learning</h3>
+
+            <p>
+                Powered by advanced Computer Vision and Artificial Intelligence.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STATISTICS ================= -->
+
+<section class="statistics">
+
+    <div class="stat-item">
+
+        <h2 class="counter">5000+</h2>
+
+        <p>Images Processed</p>
+
+    </div>
+
+    <div class="stat-item">
+
+        <h2 class="counter">95%</h2>
+
+        <p>Detection Accuracy</p>
+
+    </div>
+
+    <div class="stat-item">
+
+        <h2 class="counter">YOLOv8</h2>
+
+        <p>AI Model</p>
+
+    </div>
+
+    <div class="stat-item">
+
+        <h2 class="counter">24/7</h2>
+
+        <p>Road Monitoring</p>
+
+    </div>
+
+</section>
+
+
+<!-- Upload Section starts in Part 3 -->
+
+<!-- ================= UPLOAD SECTION ================= -->
+
+<section id="upload" class="upload-section">
+
+    <div class="section-title">
+
+        <span>AI Detection</span>
+
+        <h2>Upload Image or Video</h2>
+
+        <p>
+            Upload a road image or video to detect potholes using our
+            AI-powered YOLOv8 model.
+        </p>
+
+    </div>
+
+    <div class="upload-container">
+
+        <form
+            id="uploadForm"
+            action="/predict"
+            method="POST"
+            enctype="multipart/form-data">
+
+            <div class="upload-card">
+
+                <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+
+                <h3>Select Image or Video</h3>
+
+                <p id="fileName">
+                    Drag & Drop or Browse File
+                </p>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    name="image"
+                    required>
+
+                <button
+                    id="detectBtn"
+                    class="upload-btn"
+                    type="submit">
+
+                    Detect Potholes
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LOADING ================= -->
+
+<div id="loadingScreen">
+
+    <div class="loader"></div>
+
+    <h2>AI is Detecting Potholes...</h2>
+
+    <p>Please wait a few seconds.</p>
+
+</div>
+
+
+<!-- ================= RESULT ================= -->
+
+{% if image or video %}
+
+<section id="results" class="result-section">
+
+    <div class="section-title">
+        <span>Detection Result</span>
+        <h2>AI Prediction Output</h2>
+    </div>
+
+    <div class="result-container">
+
+        <!-- LEFT SIDE -->
+        <div class="result-preview">
+
+            {% if image %}
+
+            <img
+                src="{{ url_for('static', filename=image) }}"
+                class="result-image"
+                alt="Detected Image">
+
+            <a class="download-btn"
+               href="{{ url_for('static', filename=image) }}"
+               download>
+                <i class="fa-solid fa-download"></i>
+                Download Detected Image
+            </a>
+
+            {% endif %}
+
+            {% if video %}
+
+            <video controls class="result-video">
+                <source src="{{ url_for('static', filename=video) }}" type="video/mp4">
+            </video>
+
+            <a class="download-btn"
+               href="{{ url_for('static', filename=video) }}"
+               download>
+                <i class="fa-solid fa-download"></i>
+                Download Detected Video
+            </a>
+
+            {% endif %}
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="report-card">
+
+            <h3>
+                <i class="fa-solid fa-chart-column"></i>
+                Detection Report
+            </h3>
+
+            <div class="report-item">
+                <span>
+                    <i class="fa-solid fa-road"></i>
+                    Potholes Detected
+                </span>
+
+                <strong>{{ potholes }}</strong>
+            </div>
+
+            <div class="report-item">
+                <span>
+                    <i class="fa-solid fa-bullseye"></i>
+                    Confidence
+                </span>
+
+                <strong>{{ confidence }}%</strong>
+            </div>
+
+            <div class="report-item">
+                <span>
+                    <i class="fa-solid fa-clock"></i>
+                    Processing Time
+                </span>
+
+                <strong>{{ time }} sec</strong>
+            </div>
+
+            <div class="report-item">
+                <span>Status</span>
+
+                {% if potholes == 0 %}
+                    <strong style="color:green;">✅ No Potholes Detected</strong>
+                {% else %}
+                    <strong style="color:#d32f2f;">⚠ Detection Completed</strong>
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endif %}
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact">
+
+    <div class="section-title">
+
+        <span>Contact</span>
+
+        <h2>Project Information</h2>
+
+    </div>
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-user-graduate"></i>
+
+            <h3>Developer</h3>
+
+            <p>Imran Khan A</p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-building-columns"></i>
+
+            <h3>College</h3>
+
+            <p>Dhaanish Ahmed College of Engineering</p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h3>Technology</h3>
+
+            <p>YOLOv8 • Flask • OpenCV • Python</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact" class="contact-section">
+
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact-box">
+
+        <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+                <h3>Email</h3>
+                <a href="mailto:yourmail@gmail.com">
+                    imrankhan122005@gmail.com
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+                <h3>Mobile</h3>
+                <a href="tel:+919876543210">
+                    +91 81908 17247
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div>
+                <h3>GitHub</h3>
+                <a href="https://github.com/imran-khann1024" target="_blank">
+                    github.com/imran-khann1024
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</section> <!-- Project Information -->
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>🚧 AI Powered Pothole Detection System</h3>
+
+    <p>
+
+        Deep Learning Project
+
+    </p>
+
+    <p>
+
+        © 2026 All Rights Reserved
+
+    </p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+{% if image or video %}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const result = document.getElementById("results");
+
+    if (result) {
+
+        setTimeout(function () {
+
+            window.scrollTo({
+                top: result.offsetTop - 80,
+                behavior: "smooth"
+            });
+
+        }, 700);
+
+    }
+
+});
+</script>
+{% endif %}
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>
